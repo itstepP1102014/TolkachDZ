@@ -4,17 +4,17 @@
 int main()
 {
     int n;
-
     printf("Enter your amt numbers: ", n);
     scanf("%d", &n);
 
-    for (int i=1, j=0 + ; i<=n; ++i)
+    int u, b=1;
+    for (int i=1; i<=n; i++)
     {
+        printf("Enter %d number:", i, u);
+        scanf("%d", &u);
 
-        printf(" \n");
-
-
-
+    printf("%d", b*=u);
     }
+
     return 0;
 }
