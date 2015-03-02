@@ -11,23 +11,24 @@
 void treatSigWinch(int singo);
 void initialiseProgram();
 enum Colors{normal,green,red};
+char closeCell[4] = "\342\227\206";
+char flaggetCell[4] = "\342\227\204";
+
+enum State {opened, hidden, flagged};
+
+#define ROWS 15
+#define COLS 17
 
 int main()
 {
     initialiseProgram();
 
-    attron(COLOR_PAIR(green));
+    attron(COLOR_PAIR(1));
     printw("Hello world!");
-    attroff(COLOR_PAIR(green));
+    attroff(COLOR_PAIR(1));
     refresh();
     getch();
-    attron(A_BLINK|A_BOLD);
-    move(0,0);
-    printw("Hello wor");
-    attroff(A_BLINK|A_BOLD);
-    refresh();
-    getch();
-    endwin();
+
     return 0;
 
 }
@@ -47,10 +48,10 @@ void initialiseProgram()
     noecho();
     curs_set(0);
     start_color();
-    //init_pair(1, COLOR_GREEN, COLOR_BLACK);
-    init_pair(normal, COLOR_WHITE, COLOR_BLACK);
-    init_pair(green, COLOR_GREEN, COLOR_YELLOW);
-    init_pair(red, COLOR_RED, COLOR_BLACK);
+    init_pair(1, COLOR_GREEN, COLOR_BLACK);
+    //init_pair(normal, COLOR_WHITE, COLOR_BLACK);
+    //init_pair(green, COLOR_GREEN, COLOR_BLACK);
+    //init_pair(red, COLOR_RED, COLOR_BLACK);
 }
 
 void treatSigWinch(int signo)
