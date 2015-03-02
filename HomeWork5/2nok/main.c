@@ -3,11 +3,13 @@
 
 int main()
 {
-    int a, b, i;
+    int a, b, i, j;
     printf("Enter first number: ");
     scanf("%d", &a);
     printf("Enter number two: ");
     scanf("%d", &b);
+
+    int *A = a, *B = b;
 
     while(a!=0 && b!=0)
     {
@@ -16,11 +18,16 @@ int main()
             a = a % b;
         }
         else(b = b % a);
+
+          i = a + b;
     }
 
     system("cls");
-    i = a + b;
-    printf("gcd=%d", i);
+
+
+   // j = (a * b) / i;
+    printf("%d\n",i);
+    printf("lcm=%d", (a*b)/i);
 
 
     return 0;
