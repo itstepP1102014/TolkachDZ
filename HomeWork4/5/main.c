@@ -30,11 +30,11 @@ int main()
 
     if (n == r)
 
-    printf("Conglaturation your number is truuue!!");
+    printf("Congratulations! Your number is true!!");
 
     else
 
-    printf("LOOOOOOOL!!!, true number is: %d", r);
+    printf("LOL!!!, true number is: %d", r);
 
     return 0;
 }
