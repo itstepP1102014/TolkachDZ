@@ -65,7 +65,7 @@ void bubleSort(int *a, int n, bool (*less)(int,int))
                 swap(&a[j], &a[j +1]);
 }
 
-typedef double (*MathFunc)(double);
+//typedef double (*MathFunc)(double);
 
-double solveByNewton(double x0; double eps,
-                     MathFunc f, MathFunc df);
+//double solveByNewton(double x0; double eps,
+                    // MathFunc f, MathFunc df);
