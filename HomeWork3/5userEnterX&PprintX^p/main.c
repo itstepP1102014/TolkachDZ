@@ -3,12 +3,14 @@
 #include <math.h>
 
 int main()
-{   int x, p, a;
-    printf("Enter x number: \n");
-    scanf("%d", &x);
+{   int x, p, a=1;
+
     printf("Enter p exponent: \n");
     scanf("%d", &p);
-a = scalbn(x,p);
-    printf("%d", a);
+for (i=1; i<=p; i++)
+    printf("Enter x number: \n");
+    scanf("%d", &x);
+
+    printf("%d", a*=x);
     return 0;
 }

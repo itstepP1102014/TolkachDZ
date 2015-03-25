@@ -27,7 +27,7 @@ int main()
 
    // j = (a * b) / i;
     printf("%d\n",i);
-    printf("lcm=%d", (a*b)/i);
+    printf("lcm=%d", ((*A)*(*B))/i);
 
 
     return 0;
